@@ -1,0 +1,17 @@
+
+
+GoogleMaps.init(
+    {
+        'sensor': true, //optional
+        'key': 'AIzaSyDTpexsbGfPuuVhovJGpWfWcCsmEA_T_6U', //optional
+        'language': 'fr' //optional
+    }, 
+    function(){
+        var mapOptions = {
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+        };
+        map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions); 
+        map.setCenter(new google.maps.LatLng( 35.363556, 138.730438 ));
+    }
+);

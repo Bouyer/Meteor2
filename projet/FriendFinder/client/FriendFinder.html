@@ -1,0 +1,46 @@
+<head>
+	<title>FriendFinder</title>
+</head>
+
+<body>
+	{{> page}}
+</body>
+
+<template name="page">
+
+	<section>
+		
+		<article class="map">
+			{{> map}}
+		</article>
+		
+		<article class="contenu">
+			{{> acceuil}}
+		</article>
+		
+	</section>
+
+
+</template>
+
+<template name="acceuil">
+	<h1>Bienvenue sur Friend Finder</h1>
+			</br>
+			<h2>Connectez-vous :</h2>
+			<div class="centrer">
+				<input type="button" id="amis" value="connexion"/>
+			</div>
+			</br>
+			</br>
+			</br>
+			
+			<div class="infos">
+				<p>Friend Finder est une application qui vous permet de savoir où sont vos amis en temps réel et à tout moment !</p>
+				<p>Connectez-vous et retrouvez-les !</p>
+			</div>
+</template>
+
+<template name="map">
+	<div id="map-canvas"></div>
+</template>
+

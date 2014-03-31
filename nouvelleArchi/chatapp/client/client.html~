@@ -1,0 +1,55 @@
+<head>
+  <title>Chat app</title>
+</head>
+
+<body>
+  {{> loginButtons align="right"}}
+  <h1>Chatapp</h1>
+  {{> welcome }}
+  {{> input}}
+  {{> messages}}
+  {{> register}}
+  {{> utilisateurs}}
+</body>
+
+<template name="welcome">
+  <p>
+    Welcome to the example chat app! Please log in to show your username.
+  </p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+    <strong>{{name}}:</strong>{{message}}<br>
+  {{/each }}
+</template>
+
+<template name="input">
+  <p>Message: <input type="text" id="message"></p>
+</template>
+
+<template name="login">
+  <form id="login-form" action="action">
+    <div>
+      <input type="email" id="login-email" />
+      <input type="password" id="login-password" />
+      <input type="submit" id="login-button" value="Sign in" />
+    </div>
+  </form>
+</template>
+
+<template name="register">
+  <form id="register-form" action="action">
+    <div>
+      email:<input type="email" id="account-email"/><br>
+      password:<input type="password" id="account-password" /><br>
+      <input type="submit" id="create-account" value="Create an Account" />
+    </div>
+  </form>
+</template>
+
+<template name="utilisateurs">
+  {{#each utilisateurs}}
+    <strong>{{email}}:</strong>{{utilisateur}}<br>
+  {{/each }}
+</template>

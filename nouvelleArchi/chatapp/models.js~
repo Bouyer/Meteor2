@@ -1,0 +1,6 @@
+/**
+* Models
+**/
+
+Messages = new Meteor.Collection('messages');
+Utilisateur = new Meteor.Collection('utilisateurs');
